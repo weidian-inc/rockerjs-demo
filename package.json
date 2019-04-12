@@ -1,0 +1,10 @@
+{
+    "name": "rockerjs-demo",
+    "dependencies": {
+        "@rockerjs/midlog-starter": "^1.0.1",
+        "@rockerjs/mvc": "^1.0.3",
+        "@rockerjs/mysql-starter": "^1.0.0",
+        "@rockerjs/rpc-starter": "^1.0.0",
+        "@rockerjs/tracer": "1.0.1"
+    }
+}
