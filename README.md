@@ -14,4 +14,4 @@ NODE_ENV=dev node index
 
 rockerjs/mvc基于配置运行，容器扫描所有的Bean，包括 Filter、Component、Controller等元素，分别在各个生命周期内初始化；
 
-同时提供两种 starter 默认初始化 mysql 和 redis 操作， 只需在 app.config中的对应section中配置 starter 即可。
+同时提供两种 starter 默认初始化 mysql 和 redis 操作， 只需在 app.config中的对应section中配置 starter 即可。 
