@@ -1,8 +1,12 @@
 ## run
 
-node index // 使用config/app.config配置
+// 使用config/app.config配置
 
-NODE_ENV=dev node index // 使用config/app.dev.config配置
+node index 
+
+// 使用config/app.dev.config配置
+
+NODE_ENV=dev node index 
 
 运行后，访问 `http://127.0.0.1:8080/home/a?name=someone&person={a:1,b:2}`
 
