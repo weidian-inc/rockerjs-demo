@@ -1,11 +1,18 @@
 {
     "name": "rockerjs-demo",
+    "scripts": {
+        "build": "(tsc || true)",
+        "start": "npm run build && node index",
+        "start:dev": "npm run build && NODE_ENV=dev node index"
+    },
     "dependencies": {
         "@rockerjs/midlog-starter": "^1.0.1",
         "@rockerjs/mvc": "^1.0.3",
         "@rockerjs/mysql-starter": "^1.0.0",
         "@rockerjs/rpc-starter": "^1.0.1",
-        "@rockerjs/tracer": "1.0.1",
-        "@vdian/rocker-wdr": "0.0.4"
+        "@rockerjs/tracer": "1.0.1"
+    },
+    "devDependencies": {
+        "typescript": "^2.7.2"
     }
 }

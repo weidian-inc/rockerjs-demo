@@ -1,4 +1,4 @@
-///* shadow
+/// shadow
 import { login } from '@vdian/rocker-wdr';
 import { Filter, AbstractFilter } from '@rockerjs/mvc';
 

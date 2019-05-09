@@ -11,9 +11,12 @@ class App extends AbstractApplication{
         server.config({
             assets: {
                 '/assets': {
-                    folder: path.join(__dirname),
+                    folder: path.join(__dirname, 'assets'),
                     cache: 'Etag'
                 },
+                '/favicon.ico': {
+                    folder: path.join(__dirname, 'assets')
+                }
             },
             errorProcessor: error => {
                 console.error("service error", error);
