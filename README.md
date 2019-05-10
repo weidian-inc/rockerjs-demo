@@ -16,6 +16,14 @@ npm run start:dev
 
 运行后，访问 `http://127.0.0.1:8080/`
 
+### docker运行
+执行命令
+```sh
+docker-compose up --build
+```
+
+等待服务启动成功后，访问 `http://127.0.0.1:8080/home/`
+
 ## specially
 
 rockerjs/mvc基于配置运行，容器扫描所有的Bean，包括 Filter、Component、Controller等元素，分别在各个生命周期内初始化；

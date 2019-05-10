@@ -22,7 +22,7 @@ export class MainService {
 
         // const sendResult = await getProducer().send(msg);
         
-        let result = await this.db.queryByName('yangli');
+        let result = await this.db.queryAll();
         return {
             // sendResult,
             result,

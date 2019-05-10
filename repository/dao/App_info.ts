@@ -2,7 +2,7 @@
 
 import { Mysql } from "@rockerjs/mysql-starter";
 const { DOBase, Mapping } = Mysql.Module; // 使用 typeof 强转类型
-import { AppInfo } from "../dto/App_info";
+import { AppInfo } from "../do/App_info";
 
 export class AppInfoDao extends DOBase {
     public async add({appid,secrete,username,appname}) {

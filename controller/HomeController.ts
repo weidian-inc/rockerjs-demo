@@ -8,7 +8,7 @@ export class HomeController {
     @Inject
     mainService: MainService;
 
-    @Get({url: '/a'})
+    @Get({url: '/'})
     async home(@Param("name") name: string, @Param("person") person: object) {
         let a = await this.mainService.sendMsgThenquery();
         // let b = await this.mainService.queryCache();
