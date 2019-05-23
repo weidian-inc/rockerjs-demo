@@ -5,6 +5,7 @@ import { Controller, Get, Param, Request } from '@rockerjs/mvc';
 export class IndexController {
     @Get({url: '/'})
     async index() {
+        Logger.info('hello world');
         return 'hello world';
     }
 }

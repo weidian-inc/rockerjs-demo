@@ -5,7 +5,7 @@ import { Application, AbstractApplication } from "@rockerjs/mvc";
 // import { Rocketmq } from "@rockerjs/rocketmq-starter";
 
 @Application
-class App extends AbstractApplication{
+export class App extends AbstractApplication{
     public async beforeServerStart(server, args) {
         console.log('beforeServerStart hook', server, args);
         server.config({
