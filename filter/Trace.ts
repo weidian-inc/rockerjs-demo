@@ -1,10 +1,11 @@
 import tracer from '@rockerjs/tracer';
+import { Logger } from "@rockerjs/common";
 import { Filter, AbstractFilter } from '@rockerjs/mvc';
 
 @Filter
 export class Trace extends AbstractFilter {
-    init(args) {    
-        console.log('trace filter init', args);
+    init(args) {
+        Logger.info('trace filter init' + JSON.stringify(args));
     }
     
     async doFilter(context, next) {
@@ -12,6 +13,6 @@ export class Trace extends AbstractFilter {
     }
 
     destroy() {
-        console.log('trace filter destroy')
+        Logger.info('trace filter destroy');
     }
 }

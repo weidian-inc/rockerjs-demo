@@ -8,29 +8,26 @@ export class HomeController {
     @Inject
     mainService: MainService;
 
-    @Get({url: '/'})
+    @Get({url: '/queryDb'})
     async home(@Param("name") name: string, @Param("person") person: object) {
-        let a = await this.mainService.sendMsgThenquery();
-        // let b = await this.mainService.queryCache();
-        Logger.info('hehe');
+        Logger.info('query db...');
+        let result = await this.mainService.sendMsgThenquery();
         return {
             tag: 'hello world',
-            a,
-            // b,
+            result,
             name,
             person
-        }
+        };
     }
 
-    @Get({url: '/queryAppInfo'})
-    async queryAppInfo(@Request req) {
+    @Get({url: '/queryCateInfo'})
+    async queryCateInfo() {
         let ret = await this.mainService.requestNpsServer();
         return ret;
     }
 
     @Get({url: '/error'})
-    async error(@Param("name") name: string, @Param("person") person: object) {
-        throw new Error('test errorprocessor')
+    async error() {
+        throw new Error('test errorprocessor');
     }
-
 }

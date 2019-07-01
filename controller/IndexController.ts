@@ -3,9 +3,11 @@ import { Controller, Get, Param, Request } from '@rockerjs/mvc';
 
 @Controller("/")
 export class IndexController {
-    @Get({url: '/'})
+    @Get({url: '/', render: '../view/index/index.ejs'})
     async index() {
         Logger.info('hello world');
-        return 'hello world';
+        return {
+            message: 'hello world'
+        };
     }
 }

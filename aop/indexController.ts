@@ -1,3 +1,4 @@
+// AOP使用文档请查阅 https://rockerjs.weidian.com/rockerjs/core.html#%E9%9D%A2%E5%90%91%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B-aop
 import { Aspect, Pointcut, Before, After, Around } from "@rockerjs/core";
 import { Logger } from "@rockerjs/common";
 import { IndexController } from "../controller/IndexController";
@@ -29,6 +30,7 @@ class ASLogger {
     return method().then((result) => {
       Logger.info("log:result: " + result);
       Logger.info("log:exetime: " + (Date.now() - d)/1000);
+      return result;
     });
   }
 

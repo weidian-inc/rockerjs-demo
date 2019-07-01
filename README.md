@@ -4,7 +4,8 @@
 npm i
 ```
 
-使用config/app.config配置
+### 简单启动
+使用config/app.prod.config配置
 ```sh
 npm run start
 ```
@@ -22,7 +23,13 @@ npm run start:dev
 docker-compose up --build
 ```
 
-等待服务启动成功后，访问 `http://127.0.0.1:8080/home/`
+等待服务启动成功后，访问 
+
+```
+http://127.0.0.1:8080/home/queryDb
+http://127.0.0.1:8080/home/queryCateInfo
+http://127.0.0.1:8080/home/error
+```
 
 ## specially
 
